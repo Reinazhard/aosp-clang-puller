@@ -1,0 +1,17 @@
+---
+kind: pipeline
+name: NGenToD GCC ARM64
+
+clone:
+  depth: 1
+
+steps:
+- name: val
+  image: ubuntu:latest
+  environment:
+      GH_TOKEN:
+        from_secret: GH_TOKEN
+  commands:
+    - "export GH_TOKEN"
+    - apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git wget tar
+    - bash clang.sh
