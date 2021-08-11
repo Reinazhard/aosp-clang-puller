@@ -19,4 +19,5 @@ cp -rf ${EMOH}/tmp/* ${EMOH}/push/
 cd ${EMOH}/push/
 git add .
 git commit -s -m "Import AOSP Clang from https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/${CLANG_VERSION}"
+git lfs migrate import --include="lib64/liblldb.so.13.0.1git"
 git push origin
