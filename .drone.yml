@@ -13,5 +13,5 @@ steps:
         from_secret: GH_TOKEN
   commands:
     - "export GH_TOKEN"
-    - apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git wget tar
+    - apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git wget tar git-lfs
     - bash clang.sh
