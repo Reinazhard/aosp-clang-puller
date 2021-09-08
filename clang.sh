@@ -5,6 +5,8 @@
 export EMOH="/drone/src"
 export CLANG_VERSION="clang-r433403"  # https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master
 
+git config --global http.version HTTP/1.1
+
 mkdir ${EMOH}/tmp
 cd ${EMOH}/tmp
 
