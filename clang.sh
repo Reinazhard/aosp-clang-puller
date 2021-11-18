@@ -3,7 +3,7 @@
 
 
 export EMOH="/drone/src"
-export CLANG_VERSION="clang-r433403"  # https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master
+export CLANG_VERSION="clang-r437112"  # https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master
 
 git config --global http.version HTTP/1.1
 
@@ -21,5 +21,5 @@ cp -rf ${EMOH}/tmp/* ${EMOH}/push/
 cd ${EMOH}/push/
 git add .
 git commit -s -m "Import AOSP Clang from https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/${CLANG_VERSION}"
-git lfs migrate import --include="lib64/liblldb.so.13.*git"
+git lfs migrate import --include="lib64/liblldb.so.14.*git"
 git push origin
