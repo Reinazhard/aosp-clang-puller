@@ -10,8 +10,8 @@ git config --global http.version HTTP/1.1
 mkdir ${EMOH}/tmp
 cd ${EMOH}/tmp
 
-wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/${CLANG_VERSION}.tgz
-tar -xvf ${CLANG_VERSION}.tgz
+wget --quiet https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/${CLANG_VERSION}.tgz
+tar -xf ${CLANG_VERSION}.tgz
 rm -rf ${CLANG_VERSION}.tgz
 
 git clone https://Reinazhard:${GH_TOKEN}@github.com/pjorektneira/aosp-clang.git ${EMOH}/push
@@ -20,6 +20,6 @@ cp -rf ${EMOH}/tmp/* ${EMOH}/push/
 
 cd ${EMOH}/push/
 git add .
-git commit -s -m "Import AOSP Clang from https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/${CLANG_VERSION}"
+git commit -s --quiet -m "Import AOSP Clang from https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/${CLANG_VERSION}"
 git lfs migrate import --include="lib64/liblldb.so.14.*git"
 git push origin
