@@ -9,9 +9,9 @@ steps:
 - name: val
   image: ubuntu:latest
   environment:
-      GH_TOKEN:
-        from_secret: GH_TOKEN
+      GL_TOKEN:
+        from_secret: GL_TOKEN
   commands:
-    - "export GH_TOKEN"
+    - "export GL_TOKEN"
     - apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git wget tar git-lfs
     - bash clang.sh
