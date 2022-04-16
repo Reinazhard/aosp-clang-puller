@@ -3,7 +3,7 @@
 
 
 export EMOH="/drone/src"
-export CLANG_VERSION="clang-r450784b"  # https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master
+export CLANG_VERSION="clang-r450784c"  # https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master
 
 mkdir ${EMOH}/tmp
 cd ${EMOH}/tmp
